@@ -1,0 +1,36 @@
+html, body{
+    /*
+    margin: 0;
+    padding: 0;
+    */
+}
+.coloring{box-sizing: border-box; margin: 0 auto; align-items: top;/*수직정렬 탑*/} 
+.coloring .item{background-color: blue; text-align: center;}
+.coloring .item:nth-child(7n+1){background-color:lightblue;}
+.coloring .item:nth-child(7n+2){background-color:orange;}
+.coloring .item:nth-child(7n+3){background-color:darkgray;}
+.coloring .item:nth-child(7n+4){background-color:coral;}
+.coloring .item:nth-child(7n+5){background-color:pink;}
+.coloring .item:nth-child(7n+6){background-color:khaki;}
+.coloring .item:nth-child(7n+7){background-color:lightslategray;}
+.spacer{
+    flex-basis: 100%;
+    height: 0;
+}
+
+.grid{
+    width: 600px;
+    display: grid;
+    grid-template-columns: auto 150px;
+    grid-template-areas: "header header" "title sidebar1" "main sidebar1" "footer footer";
+    gap: 10px;
+    margin: 0 auto;
+}
+.grid .item{
+    background-color: #a99;
+}
+header{grid-area: header;}
+h1{grid-area: title; height: 50px; margin: 0;}
+main{grid-area: main; height: 300px;}
+aside{grid-area: sidebar1;}
+footer{grid-area: footer;}

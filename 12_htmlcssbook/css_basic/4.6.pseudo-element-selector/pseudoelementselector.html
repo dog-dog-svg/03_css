@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자</title>
+    <link rel="stylesheet" href="./pseudoelementselector.css"/>
+</head>
+<body>
+    <a href="#msg">클릭</a>
+<div id="msg">메시지</div>
+    <h1>문서 타이틀</h1>
+    <article>
+        <p class="element">
+            <span>첫번째 줄</span><span>요소 앞에 가상 요소 "content" 속성으로 입력한 내용을 표시합니다.</span>
+        </p>
+        <p class="element">
+            <span>두번째 줄</span><span>호환성 유지를 위해 ":before"도 구현되어 있으며, 사용할 수도 있습니다.</span>
+        </p>
+        <p class="element">
+            <span>세번째 줄</span><span>"::before" 가상 요소는 속성으로 "content" 가 있으며, "content" 속성에 표시할 텍스트 내용이 있어야 가상 요소가 표시됩니다.</span>
+        </p>
+        <p class="element">
+            <span>네번째 줄</span><span>HTML 문서 안에 반복적으로 나오는 같은 태그 앞에, 또는 반복되는 목록, 문단(들) 앞에 공통으로 적용할 텍스트 내용, 아이콘, 배경 이미지 등을 표시할 수 있습니다.</span>
+        </p>
+        <h1 class="item">섹션 타이틀</h1>
+        <p><b class="marker">문단 1</b></p>
+        <div class="item" lang="ko">
+            <div><span>문단 2</span></div>
+            <div>하위 문단 1</div>
+        </div>
+        <p class="item">문단 3</p>
+        <p>문단 4</p>
+    </article>
+    <article>
+        <p class="marker">only-child</p>
+    </article>
+    <div>
+        <p>유일한 문단 요소</p>
+        <div></div>
+        <div></div>
+    </div>
+</article>
+    <article>
+        <h1>섹션 타이틀 2</h1>
+        <p>문단 4</p>
+        <p>문단 5</p>
+    </article>
+    <ul>
+        <li>
+            메뉴1
+            <ul>
+                <li>서브메뉴1</li>
+                <li>서브메뉴2</li>
+                <li>서브메뉴3</li>
+            </ul>
+        </li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </ul>
+</body>
+</html>

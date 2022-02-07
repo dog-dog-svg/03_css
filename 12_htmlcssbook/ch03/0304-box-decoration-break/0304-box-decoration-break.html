@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Box Decoration Break</title>
+
+<style type="text/css">
+
+	body {
+		font-size: 62.5%;
+		margin: 0;
+	}
+
+		p {
+			width: 200px;
+			background: rgba(250, 250, 250, 0.8);
+			margin: 50px auto;
+			font: 2em/1.5em Cambria;
+			text-align: center;
+			padding: 40px;
+			border-radius: 10px;
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		}
+
+			p span {
+				background: #ccc;
+				padding: 2px;
+				border: 1px dashed #333;
+				border-radius: 5px;
+			}
+
+			p:last-child span {
+				-webkit-box-decoration-break: clone;
+			}
+	
+</style>
+
+</head>
+
+<body>
+
+	<p>Lorem ipsum dolor sit amet, <span>consectetur adipiscing</span> elit. Integer vitae elit mauris nulla id tellus diam.</p>
+
+	<p>Lorem ipsum dolor sit amet, <span>consectetur adipiscing</span> elit. Integer vitae elit mauris nulla id tellus diam.</p>
+
+</body>
+</html>

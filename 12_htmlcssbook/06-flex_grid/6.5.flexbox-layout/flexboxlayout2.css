@@ -1,0 +1,38 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.flexbox{background-color: #99a; padding: 1.25em; box-sizing: border-box; width: 600px; margin: 0 auto; align-items: top;/*수직정렬 탑*/} 
+.flexbox .item{background-color: blue; text-align: center; height: 100px;}
+.flexbox .item:nth-child(7n+1){background-color:lightblue;}
+.flexbox .item:nth-child(7n+2){background-color:orange;}
+.flexbox .item:nth-child(7n+3){background-color:darkgray;}
+.flexbox .item:nth-child(7n+4){background-color:coral;}
+.flexbox .item:nth-child(7n+5){background-color:pink;}
+.flexbox .item:nth-child(7n+6){background-color:khaki;}
+.flexbox .item:nth-child(7n+7){background-color:lightslategray;}
+
+.content4{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content4 .item{
+    margin-bottom: 1em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.content4 .item span{
+    width: 100%;
+}
+.content4 .item:nth-last-child(1){
+    margin-bottom: 0;
+}
+.content4 .item:nth-child(1){width: 280px; margin-right:1.25em;flex-grow: 0;}
+.content4 .item:nth-child(3){width: 100%;}
+.content4 .item:nth-child(4){margin-right:1.25em; min-height: 600px;}
+.content4 .item:nth-child(5){width: 280px; min-height: 300px;flex-grow: 0;}
+.content4 .item:nth-child(6){width: 100%;}

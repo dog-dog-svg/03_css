@@ -1,0 +1,38 @@
+
+.flexbox{
+    display: flex;
+    max-width: 160px;
+    gap: 1em;
+}
+.flexbox > *{
+    flex-shrink: 0;
+}
+
+.arrow{
+    width: 40px;
+    height: 40px;
+
+}
+.arrow:after{
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: 20px solid transparent;
+}
+.arrow-up:after{
+    border-top-width: 0;
+    border-bottom-color: purple;
+}
+.arrow-down:after{
+    border-bottom-width: 0;
+    border-top-color: purple;
+}
+.arrow-right:after{
+    border-right-width: 0;
+    border-left-color: purple;
+}
+.arrow-left:after{
+    border-left-width: 0;
+    border-right-color: purple;
+}

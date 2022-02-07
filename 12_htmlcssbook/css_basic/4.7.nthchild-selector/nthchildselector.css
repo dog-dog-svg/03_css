@@ -1,0 +1,6 @@
+.posts .item:nth-of-type(n){
+    color: #00a;
+    font-weight: bold;
+    font-size: 2em;
+    height: 10px;
+}

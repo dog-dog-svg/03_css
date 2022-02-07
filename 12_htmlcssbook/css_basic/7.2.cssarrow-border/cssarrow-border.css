@@ -1,0 +1,31 @@
+
+.flexbox{
+    display: flex;
+    max-width: 160px;
+    gap: 1em;
+}
+.flexbox > *{
+    flex-shrink: 0;
+}
+
+.arrow{
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+}
+.arrow-up{
+    border-top: 0;
+	border-bottom: 20px solid purple;/* 화살표 */
+}
+.arrow-down{
+    border-bottom: 0;
+	border-top: 20px solid purple;/* 화살표 */
+}
+.arrow-left{
+    border-left: 0;
+	border-right: 20px solid purple;/* 화살표 */
+}
+.arrow-right{
+    border-right: 0;
+	border-left: 20px solid purple;/* 화살표 */
+}

@@ -1,0 +1,41 @@
+p:only-child{
+    color: #a00;
+}
+p:lang(ko){
+    color:yellow;
+}
+#msg{
+    display: none;
+}
+#msg:target {
+    display: block;
+}
+.element:first-line{
+    color: #a00;
+}
+::selection{
+    background-color: #0a0;
+    color: #fff;
+}
+.element span:first-child::after{
+    content:"»";
+    color: #a00;
+    padding: 10px;
+}
+/*
+article p:first-of-type{
+    color: red;
+}
+.first-paragraph p:first-of-type{
+    color: red;
+}
+
+.first-paragraph p:first-of-type:first-letter{
+    font-size: 3em;
+    float:left;
+}
+
+.first-paragraph p:last-of-type{
+    color: red;
+}
+*/

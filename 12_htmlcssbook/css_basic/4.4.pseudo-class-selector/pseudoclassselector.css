@@ -1,0 +1,44 @@
+/*
+form input:focus{
+    border: 5px solid red;
+}
+form span.msg{
+    display: none;
+}
+form:focus-within span.msg{
+    color: red;
+    display: block;
+}
+*/
+
+
+input:checked + label {
+    color: red;
+}
+input[type="radio"]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+/*
+article p:first-of-type{
+    color: red;
+}
+.first-paragraph p:first-of-type{
+    color: red;
+}
+
+.first-paragraph p:first-of-type:first-letter{
+    font-size: 3em;
+    float:left;
+}
+
+.first-paragraph p:last-of-type{
+    color: red;
+}
+*/

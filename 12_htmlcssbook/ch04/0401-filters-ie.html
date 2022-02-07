@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS3 Filters</title>
+
+<style type="text/css">
+
+	body {
+		font-size: 62.5%;
+		margin: 0;
+	}
+
+		div {
+			background: #f5f5f5;
+			border-bottom: 1px dashed #ccc;
+			border-top: 1px dashed #ccc;
+			margin: 30px 0;
+			float: left;
+			width: 100%;
+		}
+
+			figure {
+				width: 960px;
+				margin: 0 auto;
+				padding: 15px 0 20px;
+			}
+
+				h2 {
+					font: 2.5em Georgia;
+					margin-top: 0;
+					border-bottom: 1px dotted #ccc;
+				}
+
+				div img {
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+					float: left;
+				}
+
+				div img:last-of-type {
+					float: right;
+				}
+
+				code {
+					float: right;
+					font-size: 1.5em;
+					margin: 10px 0 20px;
+				}
+
+				.grayscale { filter: grayscale(); }
+				.brightness {filter: brightness(.5); }
+				.contrast {filter: contrast(.2); }
+				.saturate {filter: saturate(3); }
+				.sepia {filter: sepia(); }
+				.hue-rotate {filter: hue-rotate(90deg); }
+				.invert {filter: invert(); }
+				.opacity {filter: opacity(.5); }
+				.drop-shadow {filter: drop-shadow(7px 7px 0 #999); }
+				.blur {filter: blur(3px); }
+				
+				.no-cssfilters img:nth-of-type(2) { opacity:.5;}
+</style>
+
+</head>
+
+<body>
+
+	<div>
+		<figure>
+			<h2>Grayscale</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="grayscale" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: grayscale();</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Brightness</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="brightness" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: brightness(50%);</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Contrast</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="contrast" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: contrast(20%);</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Saturate</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="saturate" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: saturate(300%);</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Sepia</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="sepia" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: sepia();</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Hue Rotate</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="hue-rotate" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: hue-rotate(90deg);</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Invert</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="invert" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: invert();</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Opacity</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="opacity" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: opacity(50%);</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Drop Shadow</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="drop-shadow" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: drop-shadow(7px 7px 0 #999);</code>
+		</figure>
+	</div>
+
+	<div>
+		<figure>
+			<h2>Blur</h2>
+			<img src="img/rhino.jpg" alt="Rhino">
+			<img class="blur" src="img/rhino.jpg" alt="Rhino">
+			<code>filter: blur(3px);</code>
+		</figure>
+	</div>
+	<script src="modernizr-custom.js"></script>
+
+</body>
+</html>

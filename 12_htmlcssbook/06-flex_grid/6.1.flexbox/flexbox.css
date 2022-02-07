@@ -1,0 +1,23 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #dbd;
+    padding: 20px;
+    height: 200px;
+    align-items: flex-start;
+}
+.content .item{
+    background-color: #a99;
+    text-align: center;
+    height: 100px;
+}
+.subcontent{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.content > .item:nth-child(1){width:250px;height:200px}
+.content > .item:nth-child(2){width:250px;}
+.subcontent .item:nth-child(1){width:100px;}
+.subcontent .item:nth-child(2){width:100px;align-self:flex-end;}
