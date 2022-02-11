@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>transform</title>
+		<style>
+			.box-container,
+			.box-container2 {
+				display: flex;
+			}
+
+			.box {
+				width: 100px;
+				height: 100px;
+				border: 2px solid;
+				background: rgba(255, 255, 0, 0.7);
+			}
+
+			.box-container .box:nth-child(2):hover {
+				/* width:200px; height:200px; */
+				transform: scale(2) rotate(45deg); /* 크기,회전 */
+				transform: skew(30deg); /* 비틀기 */
+				transform: skewY(30deg);
+				transform: skewY(-30deg);
+				transform: translate(30px, 10px); /* 이동 */
+				transform: translateX(30px) translateY(-30px);
+				/*  기준점이동 */
+				transform: scale(3);
+				transform-origin: /* left top  */ right bottom;
+				transform-origin:/*  0% 0%   */ 100% 100%;
+			}
+			.box-container2 .box:nth-child(2):hover {
+				margin-left: 200px;
+				width: 200%;
+			}
+
+			/* 공간은 남기고 요소만 이동 */
+			.box-container .box:nth-child(4):hover {
+				transform: translate(100px, 0);
+			}
+
+			/* absoltue 일때 공간이 비면서 이동 */
+			.box-container2 .box:nth-child(4):hover {
+				position: absolute;
+				left: 200px;
+			}
+
+            /* 트랜스폼 여러개 선언 */
+			#mybox {
+				transform: translate(-50%, 0) scale(0.8, 1) rotate(-20deg) skewX(25deg) skewY(10deg);
+				width: 8em;
+				height: 10em;
+				padding: 1em;
+				margin: 1em 20em;
+				color: #333;
+				background-color: #eee;
+				background-image: linear-gradient(#fff, #ccc);
+				border-radius: 1em;
+				box-shadow: 3px 3px 6px rgb(0 0 0 / 80%);
+			}
+
+			#mybox:hover {
+				transform: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>Loram uses cookies to keep our sites reliable, improve performance, and to analyze how our sites are used. Loram does not implement any ad tracking and no personal information is collected, used, or sold.</p>
+		<div class="box-container">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+			<div class="box">5</div>
+		</div>
+		<p>Loram uses cookies to keep our sites reliable, improve performance, and to analyze how our sites are used. Loram does not implement any ad tracking and no personal information is collected, used, or sold.</p>
+		<div class="box-container2">
+			<div class="box">1</div>
+			<div class="box">2</div>
+			<div class="box">3</div>
+			<div class="box">4</div>
+			<div class="box">5</div>
+		</div>
+		<div id="mybox">
+			<h2>Transformed Element</h2>
+			<p>This box will be transformed using CSS3.</p>
+		</div>
+	</body>
+</html>

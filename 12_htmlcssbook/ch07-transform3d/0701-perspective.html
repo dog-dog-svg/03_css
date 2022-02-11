@@ -1,57 +1,45 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Applying Perspective</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Applying Perspective</title>
 
-<style type="text/css">
+		<style type="text/css">
+			div.container {
+				width: 300px;
+				margin: 50px auto;
+				position: relative;
+				perspective: 500px;
+			}
 
-	body > div {
-		width: 300px;
-		margin: 50px auto;
-		position: relative;
-		-webkit-perspective: 500px;
-		
-	}
+			div.container div{
+				background: rgba(0, 0, 255, 0.2);
+				width: 300px;
+				height: 300px;
+				position: absolute;
+				border: 1px solid #999;
+			}
 
-		div div {
-			background: rgba(0, 0, 255, 0.2);
-			width: 300px;
-			height: 300px;
-			position: absolute;
-			border: 1px solid #999;
-		}
-
-		div .transform {
-			background: blue;
-			-webkit-transform: rotateX(45deg);
-			opacity: 1;
-			text-align: center;
-		}
-
+			div.container .transform {
+				background: blue;
+				transform: rotateX(45deg);
+				opacity: 1;
+				text-align: center;
+			}
 			div p {
 				color: #fff;
 				margin-top: 80px;
 				font: 1.3em arial;
 			}
+		</style>
+	</head>
 
-	
-</style>
-
-</head>
-
-<body>
-
-	<div>
-
-		<div>
+	<body>
+		<div class="container">
+			<div class="bg"></div>
+			<div class="transform">
+				<p>Rotated 45 deg 시계방향<br /><br /> <code>perspective: 500px;</code> 500px 떨어진 거리에서 요소를 보는 것처럼 설정</p>
+			</div>
 		</div>
-
-		<div class="transform">
-			<p>Rotated 45 degrees clockwise around the x-axis<br><br>Applying <code>perspective: 500px;</code> on this element's container sets the <em>viewing position</em> 500px away from the screen</p>
-		</div>
-
-	</div>
-
-</body>
+	</body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+
+        .box {
+            display: flex;
+            align-items: center;/*글씨 수직중앙정렬*/
+            justify-content: center;/*글씨 수평중앙정렬*/
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            background: rgba(255, 255, 0, .7);
+            
+           /*  animation: name duration timing-function delay iteration-count direction fill-mode; */
+           /*  animation: 이름 지속시간       가속도   지연시간    반복횟수      방향    fill-mode; */
+            animation: box 3s ease-in-out 1s forwards;
+            animation-play-state: running;
+        }
+        .box:hover{animation-play-state: paused;}
+        @keyframes box {
+            0%{transform: translate(0,0);}
+            20%{background-color: brown;}
+            50%{transform: translate(500px,0);}
+            55%{background-color: rgb(0, 121, 235);}
+            100%{transform: translate(700px,500px);}
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="box">box</div>
+</body>
+
+</html>

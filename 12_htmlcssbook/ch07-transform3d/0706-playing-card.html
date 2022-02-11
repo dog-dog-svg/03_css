@@ -1,75 +1,67 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Playing Card</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Playing Card</title>
 
-<style type="text/css">
-
-	body > div {
-		width: 224px;
-		margin: 50px auto;
-	}
-
-		.container {
-			width: 224px;
-			height: 313px;
-			margin-top: 30px;
-			-webkit-perspective: 700px;
-		}
-
-		.card {
-			margin: 0;
-			-webkit-transition: 2s;
-			-webkit-transform-style: preserve-3d;
-		}
-
-			.container:target .card {
-				-webkit-transform: rotateY(-180deg);
+		<style type="text/css">
+			body > div {
+				width: 224px;
+				margin: 50px auto;
 			}
 
-		.card img {
-			position: absolute;
-			-webkit-backface-visibility: hidden;
-		}
+			.container {
+				width: 224px;
+				height: 313px;
+				margin-top: 30px;
+				perspective: 700px;
+			}
 
-		.card .front {
-			-webkit-transform: rotateY(-180deg);
-		}
+			.card {
+				margin: 0;
+				transition: 2s;
+				transform-style: preserve-3d;
+			}
 
-		a {
-			padding: 10px;
-			background: #eee;
-			text-decoration: none;
-			font: 1em arial;
-			border-radius: 5px;
-			color: #333;
-		}
+			.container:target .card {
+				transform: rotateY(-180deg);
+			}
+
+			.card img {
+				position: absolute;
+				backface-visibility: hidden;
+			}
+
+			.card .front {
+				transform: rotateY(-180deg);
+			}
+
+			a {
+				padding: 10px;
+				background: #eee;
+				text-decoration: none;
+				font: 1em arial;
+				border-radius: 5px;
+				color: #333;
+			}
 
 			a:hover {
 				background: #ddd;
 			}
+		</style>
+	</head>
 
-	
-</style>
+	<body>
+		<div>
+			<a href="#flip">Flip</a>
+			<a href="#reset">Reset</a>
 
-</head>
-
-<body>
-
-	<div>
-
-		<a href="#flip">Flip</a>
-		<a href="#reset">Reset</a>
-
-		<div class="container" id="flip">
-			<figure class="card">
-				<img class="back" src="back.jpg" alt="Back Face">
-				<img class="front" src="q-hearts.jpg" alt="Queen of Hearts">
-			</figure>
+			<div class="container" id="flip">
+				<figure class="card">
+					<img class="back" src="back.jpg" alt="Back Face" />
+					<img class="front" src="q-hearts.jpg" alt="Queen of Hearts" />
+				</figure>
+			</div>
 		</div>
-
-	</div>
-
-</body>
+	</body>
 </html>
